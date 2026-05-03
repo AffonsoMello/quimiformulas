@@ -147,7 +147,7 @@
 /* ─── CHECKBOX LGPD ─── */
 .lgpd-label {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 11px;
   cursor: pointer;
   padding: 10px 12px;
@@ -170,7 +170,7 @@
   background: rgba(5,14,29,.8);
   display: flex; align-items: center; justify-content: center;
   transition: background .2s, border-color .2s, box-shadow .2s;
-  margin-top: 1px;
+  margin-top: 0;
   font-size: .72rem;
   color: #020e1a;
   font-weight: 900;
@@ -182,7 +182,7 @@
 }
 .lgpd-label input:checked + .lgpd-box::after { content: '✓'; }
 .lgpd-text {
-  font-size: .68rem;
+  font-size: .72rem;
   color: rgba(240,250,255,.72);
   line-height: 1.25;
   user-select: none;
@@ -1342,7 +1342,7 @@
           emailError.classList.remove('visible');
           lgpdCheck.checked = false;
           dlBtn.classList.remove('success');
-          dlBtn.textContent = '✅ Concluir e baixar PDF';
+          dlBtn.textContent = '📥 Concluir e baixar PDF';
           dlBtn.disabled = true;
           dlBtn.setAttribute('aria-disabled','true');
         }, 400);
@@ -1354,4 +1354,4 @@
  </body>
  </html>
 
-  
+ 
