@@ -2,14 +2,24 @@
 <html lang="pt-BR">
  <head>
   <style>
-   /* ── Fix Instagram WebView font inflation ── */
-   html {
-     font-size: 16px !important;
-     -webkit-text-size-adjust: 100% !important;
-     -moz-text-size-adjust: 100% !important;
-     text-size-adjust: 100% !important;
-   }
+   /* ── Anchor rem scale ── */
+   html { font-size: 16px !important; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
+   body { -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
   </style>
+  <script>
+   // Detect & correct Instagram/Android WebView font inflation immediately
+   (function(){
+     var el = document.createElement('div');
+     el.style.cssText = 'font-size:16px!important;position:absolute;visibility:hidden;pointer-events:none';
+     document.documentElement.appendChild(el);
+     var actual = parseFloat(window.getComputedStyle(el).fontSize);
+     document.documentElement.removeChild(el);
+     if(actual && actual !== 16){
+       var corrected = (16 * 16 / actual).toFixed(4) + 'px';
+       document.documentElement.style.setProperty('font-size', corrected, 'important');
+     }
+   })();
+  </script>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
@@ -1364,4 +1374,4 @@
  </html>
 
 
-      
+    
