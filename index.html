@@ -2,9 +2,13 @@
 <html lang="pt-BR">
  <head>
   <style>
-   /* ── Prevent Android WebView / Instagram text inflation ── */
-   html, body { -webkit-text-size-adjust: 100% !important; -moz-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
-   * { -webkit-text-size-adjust: inherit !important; -moz-text-size-adjust: inherit !important; text-size-adjust: inherit !important; }
+   /* ── Fix Instagram WebView font inflation ── */
+   html {
+     font-size: 16px !important;
+     -webkit-text-size-adjust: 100% !important;
+     -moz-text-size-adjust: 100% !important;
+     text-size-adjust: 100% !important;
+   }
   </style>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -1360,4 +1364,4 @@
  </html>
 
 
- 
+      
