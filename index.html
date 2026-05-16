@@ -22,7 +22,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;600;700&display=optional" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;600&display=optional" rel="stylesheet"/>
 <style>
 /* ───────────────────── TOKENS (paleta original mantida) ───────────────────── */
 :root {
@@ -160,11 +160,13 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   margin-top: 3px;
   font-family: 'Roboto Mono', monospace;
   font-size: .62rem;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: .04em;
   line-height: 1;
   text-transform: lowercase;
   white-space: nowrap;
+  -webkit-text-stroke: .22px currentColor;
+  text-shadow: .28px 0 0 currentColor;
 }
 .btn-primary .btn-desc { color: rgba(2,14,26,.72); }
 .btn-secondary .btn-desc { color: rgba(61,255,216,.72); }
@@ -901,6 +903,12 @@ footer span { margin: 0 10px; opacity: .35; }
   .btn > .btn-copy {
     flex: 1 1 0;
     overflow-wrap: anywhere;
+  }
+  .cta-stack .btn-primary .btn-copy {
+    transform: translateX(16px);
+  }
+  .cta-stack .btn-secondary .btn-copy {
+    transform: translateX(-18px);
   }
   .btn-primary .btn-badge {
     margin-left: -12px;
