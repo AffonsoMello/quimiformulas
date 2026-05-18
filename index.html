@@ -22,7 +22,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;600&display=optional" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;600&family=Outfit:wght@700;800;900&family=Inconsolata:wght@400;600&family=Source+Code+Pro:wght@600&display=optional" rel="stylesheet"/>
 <style>
 /* ───────────────────── TOKENS (paleta original mantida) ───────────────────── */
 :root {
@@ -168,6 +168,24 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   -webkit-text-stroke: .22px currentColor;
   text-shadow: .28px 0 0 currentColor;
 }
+/* Botão principal: Outfit 700 no texto principal, Inconsolata no subtexto */
+.btn-primary .btn-main {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+}
+.btn-primary .btn-desc {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 400;
+  -webkit-text-stroke: 0;
+  text-shadow: none;
+}
+/* Botão secundário: Inconsolata no subtexto */
+.btn-secondary .btn-desc {
+  font-family: 'Inconsolata', monospace;
+  font-weight: 400;
+  -webkit-text-stroke: 0;
+  text-shadow: none;
+}
 .btn-primary .btn-desc { color: rgba(2,14,26,.72); }
 .btn-secondary .btn-desc { color: rgba(61,255,216,.72); }
 .btn:active { transform: scale(.97) !important; }
@@ -216,7 +234,7 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   background: rgba(2,14,26,.85);
   border: 1px solid rgba(0,200,170,.45);
   border-radius: 8px; padding: 8px 14px;
-  font-family: 'Roboto Mono', monospace; font-size: .77rem; font-weight: 700;
+  font-family: 'Source Code Pro', 'Roboto Mono', monospace; font-size: .77rem; font-weight: 600;
   color: var(--amber-lt); letter-spacing: .04em;
   flex: 0 0 auto;
 }
@@ -230,8 +248,9 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
 
 /* Guarantee note */
 .guarantee {
-  font-family: 'Roboto Mono', monospace;
-  font-size: .68rem; color: var(--muted);
+  font-family: 'Inconsolata', monospace;
+  font-size: .65rem; color: var(--muted);
+  font-weight: 400;
   letter-spacing: .06em; text-align: center;
   margin-top: 10px;
   display: flex; align-items: center; justify-content: center; gap: 6px;
@@ -287,9 +306,11 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
 
 /* Headline */
 .hero h1 {
-  font-size: 4.25rem;
-  font-weight: 900; width: 100%; max-width: 820px; line-height: 1.05;
-  letter-spacing: 0;
+  font-family: Georgia, 'Noto Serif', 'Times New Roman', serif;
+  font-size: min(6.5vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  max-width: 820px;
 }
 .hero h1 > span {
   display: block;
@@ -330,8 +351,8 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
 }
 .proof-item:last-child { border-right: none; }
 .proof-num {
-  font-family: 'Exo', 'Segoe UI', Arial, sans-serif;
-  font-size: 1.65rem; font-weight: 800; color: var(--teal);
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.7rem; font-weight: 800; color: var(--teal);
   display: block; line-height: 1;
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum" 1;
@@ -929,6 +950,7 @@ footer span { margin: 0 10px; opacity: .35; }
 @media (max-width: 360px) {
   .hero h1 { font-size: 1.6rem; }
 }
+
 </style>
 </head>
 <body data-checkout-url="">
