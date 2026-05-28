@@ -569,6 +569,7 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   flex-shrink: 0;
 }
 .testi-avatar svg { width: 20px; height: 20px; }
+.hide-testimonial-photos .testi-avatar { display: none; }
 .testi-name { font-size: .88rem; font-weight: 700; color: var(--white); }
 .testi-role { font-family: 'Roboto Mono', monospace; font-size: .66rem; color: var(--muted); }
 
@@ -1025,13 +1026,13 @@ footer span { margin: 0 10px; opacity: .35; }
 
   <!-- CTA Group -->
   <div class="cta-stack">
-    <a href="#premiumOffer" class="btn btn-primary" id="heroPrimaryBtn" data-premium-cta aria-label="Comprar PDF completo com planilha de precificação e 116 fórmulas por R$12,50">
+    <a href="#premiumOffer" class="btn btn-primary" id="heroPrimaryBtn" data-premium-cta aria-label="Comprar PDF completo com planilha de precificação e 116 fórmulas por R$14,50">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       <span class="btn-copy">
         <span class="btn-main">PDF + Planilha de Precificação</span>
         <span class="btn-desc">com 116 fórmulas</span>
       </span>
-      <span class="btn-badge">R$12,50</span>
+      <span class="btn-badge">R$14,50</span>
     </a>
     <a href="#pdfModal" class="btn btn-secondary" id="heroFreeBtn" data-free-pdf aria-label="Baixar PDF grátis com 30 fórmulas">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -1071,7 +1072,7 @@ footer span { margin: 0 10px; opacity: .35; }
 <div class="urgency-bar" role="region" aria-label="Oferta relâmpago">
   <div class="urgency-inner">
     <p class="urgency-text">
-      <strong>Oferta relâmpago:</strong> preço de R$47 por R$12,50 por tempo limitado
+      <strong>Oferta relâmpago:</strong> preço de R$47 por R$14,50 por tempo limitado
     </p>
     <div class="countdown-wrap" role="timer" aria-live="off" aria-label="Contador regressivo">
       <div class="cd-block" id="cdH">00</div>
@@ -1235,24 +1236,24 @@ footer span { margin: 0 10px; opacity: .35; }
       <div class="divider" style="margin:14px auto"></div>
     </div>
     <div class="formula-grid reveal">
-      <div class="formula-item"><span class="formula-code">F-001</span><span>Emulsão O/A — Hidratante Corporal com Manteiga de Karité</span></div>
-      <div class="formula-item"><span class="formula-code">F-002</span><span>Sérum Facial com Ácido Hialurônico (PM alto e baixo)</span></div>
-      <div class="formula-item"><span class="formula-code">F-003</span><span>Sabonete em Barra pelo Processo a Frio (SAP calculado)</span></div>
-      <div class="formula-item"><span class="formula-code">F-004</span><span>Shampoo Sólido com Tensioativos Suaves (SLSA + Betaína)</span></div>
-      <div class="formula-item"><span class="formula-code">F-005</span><span>Creme Antioxidante com Vitamina C Estabilizada (AA2G)</span></div>
-      <div class="formula-item"><span class="formula-code">F-006</span><span>Desodorante Natural — Formulação sem Alumínio</span></div>
-      <div class="formula-item"><span class="formula-code">F-007</span><span>Condicionador Vegano com BTMS-50 e Proteína de Soja</span></div>
-      <div class="formula-item"><span class="formula-code">F-008</span><span>Body Splash — Blend Aromático com Fixadores Naturais</span></div>
-      <div class="formula-item"><span class="formula-code">F-009</span><span>Esfoliante Enzimático com Papaína e AHA Frutais</span></div>
-      <div class="formula-item"><span class="formula-code">F-010</span><span>Creme Noturno com Retinol Microencapsulado</span></div>
-      <div class="formula-item"><span class="formula-code">F-011</span><span>Máscara Capilar com Queratina Hidrolisada</span></div>
-      <div class="formula-item"><span class="formula-code">F-012+</span><span>+ 20 fórmulas adicionais com variações e versões veganas</span></div>
+      <div class="formula-item"><span class="formula-code">F-21</span><span>Tônico Adstringente com Ácido Mandélico e Niacinamida</span></div>
+      <div class="formula-item"><span class="formula-code">C-13</span><span>Esmalte para Unhas</span></div>
+      <div class="formula-item"><span class="formula-code">F-08</span><span>Esfoliante Corporal de Café e Óleo de Coco</span></div>
+      <div class="formula-item"><span class="formula-code">B-09</span><span>Sabonete Líquido para Toucador</span></div>
+      <div class="formula-item"><span class="formula-code">F-29</span><span>Gel-Creme Redutor com Cafeína e Extrato de Centella</span></div>
+      <div class="formula-item"><span class="formula-code">F-14</span><span>Creme para Olheiras com Cafeína e Vitamina K</span></div>
+      <div class="formula-item"><span class="formula-code">C-22</span><span>Fórmula – Shampoo Infantil</span></div>
+      <div class="formula-item"><span class="formula-code">F-27</span><span>Base Líquida Cobertura Média com SPF 15</span></div>
+      <div class="formula-item"><span class="formula-code">F-18</span><span>Leave-in Multifuncional de Proteína de Seda</span></div>
+      <div class="formula-item"><span class="formula-code">F-30</span><span>Sabonete Artesanal de Leite de Cabra e Mel</span></div>
+      <div class="formula-item"><span class="formula-code">C-25</span><span>Loção Após Barba</span></div>
+      <div class="formula-item"><span class="formula-code">A-16</span><span>Sabão Maravilha</span></div>
     </div>
   </div>
 </section>
 
 <!-- ────────────────────────── TESTIMONIALS ────────────────────────── -->
-<section class="testi" aria-labelledby="testiHeading">
+<section class="testi hide-testimonial-photos" aria-labelledby="testiHeading">
   <div class="section-inner">
     <div class="reveal" style="text-align:center">
       <p class="section-label">Resultados reais</p>
@@ -1321,14 +1322,14 @@ footer span { margin: 0 10px; opacity: .35; }
         <div role="columnheader">PDF Grátis</div>
         <div class="ch-prem" role="columnheader">★ PDF + Planilha</div>
       </div>
-      <div class="compare-row"><div class="cr-label">+30 fórmulas com INCI names</div><div><span class="check" aria-label="Incluído">✔</span></div><div><span class="check">✔</span></div></div>
+      <div class="compare-row"><div class="cr-label">30 fórmulas detalhadas</div><div><span class="check" aria-label="Incluído">✔</span></div><div><span class="check">✔</span></div></div>
       <div class="compare-row"><div class="cr-label">Parâmetros técnicos (pH, %)</div><div><span class="check">✔</span></div><div><span class="check">✔</span></div></div>
-      <div class="compare-row"><div class="cr-label">Lista de fornecedores técnicos</div><div><span class="partial">Básica</span></div><div><span class="check">✔ Completa</span></div></div>
+      <div class="compare-row"><div class="cr-label">Dicas de produção</div><div><span class="partial">básica</span></div><div><span class="check">✔ Completa</span></div></div>
       <div class="compare-row"><div class="cr-label">Planilha de precificação</div><div><span class="cross" aria-label="Não incluído">✗</span></div><div><span class="check">✔</span></div></div>
-      <div class="compare-row"><div class="cr-label">Cálculo de custo por batelada</div><div><span class="cross">✗</span></div><div><span class="check">✔</span></div></div>
+      <div class="compare-row"><div class="cr-label">Cálculo de custo</div><div><span class="cross">✗</span></div><div><span class="check">✔</span></div></div>
       <div class="compare-row"><div class="cr-label">Análise de margem por produto</div><div><span class="cross">✗</span></div><div><span class="check">✔</span></div></div>
-      <div class="compare-row"><div class="cr-label">Script de vendas técnicas (B2B)</div><div><span class="cross">✗</span></div><div><span class="check">✔</span></div></div>
-      <div class="compare-row"><div class="cr-label">Dicas de laudos e rotulagem ANVISA</div><div><span class="cross">✗</span></div><div><span class="check">✔</span></div></div>
+      <div class="compare-row"><div class="cr-label">Lista de fornecedores técnicos</div><div><span class="cross">✗</span></div><div><span class="check">✔</span></div></div>
+      <div class="compare-row"><div class="cr-label">Controle de estoque e produção</div><div><span class="cross">✗</span></div><div><span class="check">✔</span></div></div>
     </div>
   </div>
 </section>
@@ -1343,7 +1344,7 @@ footer span { margin: 0 10px; opacity: .35; }
 
       <div class="price-tag">
         <span class="price-old">R$47,00</span>
-        <span class="price-cur">R$12,50</span>
+        <span class="price-cur">R$14,50</span>
       </div>
       <p class="price-note">PAGAMENTO ÚNICO · ACESSO IMEDIATO · 7 DIAS DE GARANTIA</p>
       <p>Menos que um café duplo. Acesso permanente a todo o material técnico — fórmulas, fornecedores e planilha — que profissionais de ciências usam para gerar renda extra real.</p>
@@ -1362,7 +1363,7 @@ footer span { margin: 0 10px; opacity: .35; }
             <span class="btn-main">PDF + Planilha de Precificação</span>
             <span class="btn-desc">com 116 fórmulas</span>
           </span>
-          <span class="btn-badge">R$12,50</span>
+          <span class="btn-badge">R$14,50</span>
         </a>
         <p class="guarantee">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
@@ -1429,7 +1430,7 @@ footer span { margin: 0 10px; opacity: .35; }
             <span class="btn-main">PDF + Planilha de Precificação</span>
             <span class="btn-desc">com 116 fórmulas</span>
           </span>
-          <span class="btn-badge">R$12,50</span>
+          <span class="btn-badge">R$14,50</span>
         </a>
         <p class="guarantee">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
@@ -1454,7 +1455,7 @@ footer span { margin: 0 10px; opacity: .35; }
   <a href="#premiumOffer" class="btn btn-primary" id="floatBtn" data-premium-cta style="border-radius:14px;font-size:.88rem;width:100%;height:52px">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
     <span class="btn-copy">
-      <span class="btn-main">PDF + Planilha — R$12,50</span>
+      <span class="btn-main">PDF + Planilha — R$14,50</span>
       <span class="btn-desc">com 116 fórmulas</span>
     </span>
   </a>
