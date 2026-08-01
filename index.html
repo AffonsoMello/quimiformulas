@@ -40,7 +40,6 @@
   --border:    rgba(0,200,170,.18);
   --card-bg:   rgba(10,30,55,.7);
 
-  /* Semantic — UI UX Pro Max skill */
   --color-primary:    #00c8aa;
   --color-secondary:  #22d3ee;
   --color-accent:     #f4b942;
@@ -73,7 +72,6 @@ body {
 }
 body.modal-open { overflow: hidden; }
 
-/* ── GRID BG ── */
 body::before {
   content: '';
   position: fixed; inset: 0;
@@ -86,7 +84,6 @@ body::before {
 
 section, header, nav, footer, .bar { position: relative; z-index: 1; }
 
-/* ───────────────────── ANNOUNCEMENT BAR ───────────────────── */
 .bar {
   background: var(--teal-dk);
   color: #fff; text-align: center;
@@ -101,7 +98,6 @@ section, header, nav, footer, .bar { position: relative; z-index: 1; }
 }
 .bar strong { color: var(--amber-lt); }
 
-/* ───────────────────── TYPOGRAPHY ───────────────────── */
 h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1; }
 .mono { font-family: 'Roboto Mono', monospace; }
 
@@ -128,7 +124,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   border-radius: 2px; margin-bottom: 24px;
 }
 
-/* ───────────────────── BUTTONS (UI UX Pro Max: cursor-pointer, min 44px, transitions) ───────────────────── */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   padding: 0 28px; height: 52px; min-height: 44px;
@@ -168,7 +163,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   -webkit-text-stroke: .22px currentColor;
   text-shadow: .28px 0 0 currentColor;
 }
-/* Botão principal: Outfit 700 no texto principal, Inconsolata no subtexto */
 .btn-primary .btn-main {
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
@@ -179,7 +173,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   -webkit-text-stroke: .22px currentColor;
   text-shadow: .28px 0 0 currentColor;
 }
-/* Botão secundário: Inconsolata no subtexto */
 .btn-secondary .btn-desc {
   font-family: 'Inconsolata', monospace;
   font-weight: 400;
@@ -194,7 +187,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   outline-offset: 3px;
 }
 
-/* Primary — premium */
 .btn-primary {
   background: linear-gradient(110deg,#007a66,#00c8aa,#22d3ee,#f4b942,#00c8aa,#007a66);
   background-size: 300% 100%;
@@ -217,7 +209,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   100% { background-position: 300% 50%; }
 }
 
-/* Secondary — free */
 .btn-secondary {
   background: transparent;
   border: 1.5px solid rgba(0,200,170,.4);
@@ -229,7 +220,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   transform: translateY(-2px);
 }
 
-/* Badge inside btn */
 .btn-badge {
   background: rgba(2,14,26,.85);
   border: 1px solid rgba(0,200,170,.45);
@@ -246,7 +236,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   }
 }
 
-/* Guarantee note */
 .guarantee {
   font-family: 'Inconsolata', monospace;
   font-size: .65rem; color: var(--muted);
@@ -257,7 +246,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   flex-wrap: wrap;
 }
 
-/* ───────────────────── HERO ───────────────────── */
 .hero {
   min-height: 100svh;
   display: flex; flex-direction: column;
@@ -267,7 +255,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   overflow: hidden;
 }
 
-/* Glow orb */
 .hero::before {
   content: '';
   position: absolute;
@@ -277,7 +264,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   pointer-events: none;
 }
 
-/* Molecule SVG */
 .molecule-bg {
   position: absolute; right: -60px; top: 50%;
   transform: translateY(-50%);
@@ -285,26 +271,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   pointer-events: none;
 }
 
-/* Hero pill tag */
-.hero-tag {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: rgba(0,200,170,.08); border: 1px solid var(--border);
-  border-radius: 100px; padding: 8px 20px;
-  font-family: 'Roboto Mono', monospace; font-size: .72rem;
-  color: var(--teal); letter-spacing: .1em;
-  margin-bottom: 20px;
-}
-.hero-tag .dot {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: var(--teal); box-shadow: 0 0 8px var(--teal);
-  animation: pulse 1.8s ease-in-out infinite;
-}
-@keyframes pulse {
-  0%,100% { opacity:1; transform:scale(1); }
-  50% { opacity:.45; transform:scale(.65); }
-}
-
-/* Headline */
 .hero h1 {
   font-family: Georgia, 'Noto Serif', 'Times New Roman', serif;
   font-size: min(6.5vw, 4.2rem);
@@ -319,7 +285,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
 .hero h1 .teal { color: var(--teal); }
 .hero h1 .amber { color: var(--amber); }
 
-/* Sub */
 .hero-sub {
   margin-top: 20px; width: 100%; max-width: 580px;
   font-size: 1.1rem;
@@ -328,7 +293,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
 }
 .hero-sub strong { color: var(--white); font-weight: 700; }
 
-/* CTA stack */
 .cta-stack {
   display: flex; flex-direction: column;
   align-items: stretch; gap: 12px;
@@ -336,7 +300,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   min-width: 0;
 }
 
-/* ── PROOF STRIP ── */
 .proof-strip {
   display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
   border: 1px solid var(--border);
@@ -363,7 +326,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   letter-spacing: .1em; text-transform: uppercase; margin-top: 4px;
 }
 
-/* ───────────────────── URGENCY BAR ───────────────────── */
 .urgency-bar {
   background: rgba(244,185,66,.07);
   border-top: 1px solid rgba(244,185,66,.2);
@@ -392,12 +354,10 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
 }
 .cd-sep { color: rgba(244,185,66,.5); }
 
-/* ───────────────────── SECTIONS ───────────────────── */
 .section-inner {
   max-width: 1060px; margin: 0 auto; padding: 88px 24px;
 }
 
-/* ───────────────────── AUDIENCE ───────────────────── */
 .audience { background: var(--navy-mid); }
 
 .aud-grid {
@@ -434,7 +394,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
 }
 .aud-card p { font-size: .88rem; color: var(--muted); line-height: 1.65; }
 
-/* ───────────────────── PAIN ───────────────────── */
 .pain { background: var(--navy); }
 
 .pain-grid {
@@ -464,7 +423,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
 .pain-card h3 { font-size: .95rem; font-weight: 700; color: var(--white); margin-bottom: 5px; }
 .pain-card p  { font-size: .85rem; color: var(--muted); line-height: 1.6; }
 
-/* ───────────────────── WHAT ───────────────────── */
 .what { background: var(--navy-mid); }
 
 .what-grid {
@@ -505,7 +463,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
 .what-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
 .what-card p  { font-size: .86rem; color: var(--muted); line-height: 1.65; }
 
-/* ───────────────────── FORMULAS ───────────────────── */
 .formulas { background: var(--navy); }
 
 .formula-grid {
@@ -533,7 +490,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
 }
 .formula-item span { font-size: .88rem; color: var(--white); }
 
-/* ───────────────────── TESTIMONIALS ───────────────────── */
 .testi { background: var(--navy-mid); }
 
 .testi-grid {
@@ -573,7 +529,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
 .testi-name { font-size: .88rem; font-weight: 700; color: var(--white); }
 .testi-role { font-family: 'Roboto Mono', monospace; font-size: .66rem; color: var(--muted); }
 
-/* ───────────────────── COMPARE ───────────────────── */
 .compare { background: var(--navy); }
 
 .compare-wrap {
@@ -586,14 +541,15 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   display: grid; grid-template-columns: 1.5fr 1fr 1fr;
   background: var(--navy-lt); padding: 18px 26px; gap: 12px;
   border-bottom: 1px solid var(--border);
-  min-width: 520px;
 }
 .compare-head div {
   font-family: 'Roboto Mono', monospace;
-  font-size: .7rem; letter-spacing: .1em; color: var(--muted); text-align: center;
+  font-size: .8rem; letter-spacing: .1em; color: var(--muted);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; line-height: 1.4;
 }
 .compare-head .ch-prem { color: var(--amber); font-weight: 600; }
-.compare-head .ch-label { text-align: left; }
+.compare-head .ch-label { align-items: flex-start; text-align: left; }
 
 .compare-row {
   display: grid; grid-template-columns: 1.5fr 1fr 1fr;
@@ -601,22 +557,35 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   border-bottom: 1px solid rgba(0,200,170,.06);
   align-items: center;
   transition: background var(--transition);
-  min-width: 520px;
 }
 .compare-row:last-child { border-bottom: none; }
 .compare-row:hover { background: rgba(0,200,170,.04); }
-.compare-row div { text-align: center; font-size: .86rem; }
-.cr-label { text-align: left !important; font-weight: 600; color: var(--white); }
-
-.check   { color: var(--teal); font-size: 1rem; font-weight: 700; }
-.cross   { color: rgba(240,250,255,.18); font-size: .9rem; }
-.partial { font-family: 'Roboto Mono', monospace; font-size: .72rem; color: var(--muted); }
-
-@media (max-width: 560px) {
-  .compare-head, .compare-row { grid-template-columns: 1.3fr 1fr 1fr; padding: 14px 14px; }
+.compare-row div {
+  font-size: .98rem;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; gap: 2px; line-height: 1.3;
+}
+.cr-label {
+  align-items: flex-start !important; text-align: left !important;
+  font-weight: 600; color: var(--white); overflow-wrap: break-word;
 }
 
-/* ───────────────────── PRICE BLOCK ───────────────────── */
+.check   { color: var(--teal); font-size: 1.1rem; font-weight: 700; white-space: nowrap; }
+.cross   { color: rgba(240,250,255,.18); font-size: 1rem; }
+.partial { font-family: 'Roboto Mono', monospace; font-size: .82rem; color: var(--muted); }
+
+@media (max-width: 560px) {
+  .compare-head, .compare-row { grid-template-columns: minmax(0,116px) 1fr 1fr; padding: 12px 14px; gap: 8px; }
+  .compare-head div, .compare-row div { font-size: .8rem; }
+  .cr-label { font-size: .88rem !important; line-height: 1.32; }
+  .check { font-size: .94rem; }
+}
+
+@media (max-width: 380px) {
+  .compare-head, .compare-row { grid-template-columns: minmax(0,100px) 1fr 1fr; padding: 10px 10px; gap: 6px; }
+  .cr-label { font-size: .84rem !important; }
+}
+
 .price-block {
   background: linear-gradient(135deg,#020b16 0%,#051428 40%,#02100c 100%);
   border-top: 1px solid rgba(0,200,170,.1);
@@ -645,7 +614,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
 }
 .price-block p { color: rgba(240,250,255,.6); font-size: .96rem; line-height: 1.75; }
 
-/* ───────────────────── FAQ ───────────────────── */
 .faq { background: var(--navy-mid); }
 
 .faq-list { display: flex; flex-direction: column; gap: 10px; margin-top: 44px; }
@@ -679,7 +647,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
 }
 .faq-item.open .faq-a { max-height: 800px; padding: 0 24px 20px; }
 
-/* ───────────────────── FINAL CTA ───────────────────── */
 .final-cta { background: var(--navy); text-align: center; }
 .final-inner { max-width: 640px; margin: 0 auto; padding: 96px 24px; }
 .final-inner p {
@@ -687,7 +654,6 @@ h1, h2, h3 { font-family: 'Exo', 'Segoe UI', Arial, sans-serif; line-height: 1.1
   margin: 16px 0 36px;
 }
 
-/* ───────────────────── FOOTER ───────────────────── */
 footer {
   background: var(--navy-mid);
   border-top: 1px solid var(--border);
@@ -699,7 +665,6 @@ footer a { color: var(--teal); text-decoration: none; }
 footer a:hover { text-decoration: underline; }
 footer span { margin: 0 10px; opacity: .35; }
 
-/* ───────────────────── FLOATING CTA (mobile) ───────────────────── */
 .float-cta {
   display: none; position: fixed;
   bottom: 16px; left: 50%; transform: translateX(-50%);
@@ -710,7 +675,6 @@ footer span { margin: 0 10px; opacity: .35; }
 .float-cta.is-visible { opacity: 1; pointer-events: all; visibility: visible; }
 @media (max-width: 768px) { .float-cta { display: block; } }
 
-/* ───────────────────── MODAL ───────────────────── */
 .modal-overlay {
   position: fixed; inset: 0; z-index: 100000;
   background: rgba(5,14,29,.92); backdrop-filter: blur(12px);
@@ -757,7 +721,6 @@ footer span { margin: 0 10px; opacity: .35; }
 .modal-headline em { font-style: normal; color: var(--teal); }
 .modal-sub { text-align: center; color: var(--muted); font-size: .82rem; line-height: 1.45; margin-bottom: 18px; }
 
-/* Form */
 .mform-group { margin-bottom: 10px; position: relative; }
 .mform-label {
   display: block; font-family: 'Exo', 'Segoe UI', Arial, sans-serif;
@@ -786,7 +749,6 @@ footer span { margin: 0 10px; opacity: .35; }
 }
 .mform-error.visible { visibility: visible; }
 
-/* LGPD */
 .lgpd-label {
   display: flex; align-items: center; gap: 11px; cursor: pointer;
   padding: 10px 12px; min-height: 44px;
@@ -823,7 +785,6 @@ footer span { margin: 0 10px; opacity: .35; }
   text-align: center; margin-bottom: 14px; line-height: 1.2;
 }
 
-/* Download btn */
 .btn-download {
   width: 100%; padding: 0 20px; height: 48px; border-radius: 10px;
   font-family: 'Exo', 'Segoe UI', Arial, sans-serif; font-size: .9rem; font-weight: 700;
@@ -849,7 +810,6 @@ footer span { margin: 0 10px; opacity: .35; }
   box-shadow: 0 4px 20px rgba(0,168,136,.3);
 }
 
-/* ───────────────────── SCROLL REVEAL ───────────────────── */
 .reveal { opacity: 1; transform: none; }
 .js .reveal {
   opacity: 0; transform: none;
@@ -859,7 +819,6 @@ footer span { margin: 0 10px; opacity: .35; }
 .js .reveal.d2 { transition-delay: .16s; }
 .js .reveal.visible { opacity: 1; transform: none; }
 
-/* ───────────────────── PREFERS REDUCED MOTION ───────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .js .reveal { opacity: 1 !important; transform: none !important; }
@@ -869,7 +828,6 @@ footer span { margin: 0 10px; opacity: .35; }
   .proof-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .proof-item:nth-child(2n) { border-right: none; }
   .proof-item:nth-child(n+3) { border-top: 1px solid var(--border); }
-  .compare-head, .compare-row { min-width: 480px; }
 }
 
 @media (max-width: 900px) {
@@ -889,12 +847,6 @@ footer span { margin: 0 10px; opacity: .35; }
     letter-spacing: .015em;
   }
   .hero { align-items: stretch; padding: 64px 18px 48px; }
-  .hero-tag {
-    align-self: center;
-    padding: 8px 14px;
-    max-width: 100%;
-    font-size: .66rem;
-  }
   .hero > * { min-width: 0; }
   .hero h1 {
     width: 100%;
@@ -984,7 +936,6 @@ footer span { margin: 0 10px; opacity: .35; }
 <!-- ────────────────────────── HERO ────────────────────────── -->
 <section class="hero" aria-labelledby="heroHeading">
 
-  <!-- Molecule decoration -->
   <svg class="molecule-bg" aria-hidden="true" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
     <circle cx="200" cy="200" r="6" fill="#00c8aa"/>
     <circle cx="120" cy="140" r="5" fill="#00c8aa"/>
@@ -1004,27 +955,18 @@ footer span { margin: 0 10px; opacity: .35; }
     <line x1="280" y1="140" x2="340" y2="180" stroke="#f4b942" stroke-width="1"/>
   </svg>
 
-  <!-- Tag -->
-  <div class="hero-tag" aria-hidden="true">
-    <div class="dot"></div>
-    <span>manual da formulação cosmética</span>
-  </div>
-
-  <!-- Headline -->
   <h1 id="heroHeading">
     <span>Seu Conhecimento em</span>
     <span><span class="teal">Química</span> Finalmente</span>
     <span>Gerando <span class="amber">Renda Extra</span></span>
   </h1>
 
-  <!-- Sub -->
   <p class="hero-sub">
     <strong>+30 fórmulas técnicas</strong>, lista de fornecedores e
     <strong>planilha de precificação</strong> que te mostra como vender cosméticos
     com <strong>margem de até 580%</strong> — sem estoque, sem laboratório.
   </p>
 
-  <!-- CTA Group -->
   <div class="cta-stack">
     <a href="#premiumOffer" class="btn btn-primary" id="heroPrimaryBtn" data-premium-cta aria-label="Comprar PDF completo com planilha de precificação e 116 fórmulas por R$14,50">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -1047,7 +989,6 @@ footer span { margin: 0 10px; opacity: .35; }
     </p>
   </div>
 
-  <!-- Proof Strip -->
   <div class="proof-strip" role="list">
     <div class="proof-item" role="listitem">
       <span class="proof-num" id="dlCount">+1.120</span>
@@ -1068,7 +1009,6 @@ footer span { margin: 0 10px; opacity: .35; }
   </div>
 </section>
 
-<!-- ── URGENCY BAR ── -->
 <div class="urgency-bar" role="region" aria-label="Oferta relâmpago">
   <div class="urgency-inner">
     <p class="urgency-text">
@@ -1101,7 +1041,6 @@ footer span { margin: 0 10px; opacity: .35; }
     </div>
 
     <div class="aud-grid">
-      <!-- Card 1 -->
       <div class="aud-card reveal d1">
         <div class="aud-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="#00c8aa" stroke-width="1.8">
@@ -1111,7 +1050,6 @@ footer span { margin: 0 10px; opacity: .35; }
         <h3>Químicos &amp; Farmacêuticos</h3>
         <p>Você já entende emulsificação, tensioativos e estabilidade de pH. Falta apenas aplicar isso em produtos de alto valor de mercado.</p>
       </div>
-      <!-- Card 2 -->
       <div class="aud-card reveal d1">
         <div class="aud-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="#00c8aa" stroke-width="1.8">
@@ -1121,7 +1059,6 @@ footer span { margin: 0 10px; opacity: .35; }
         <h3>Biólogos &amp; Biomédicos</h3>
         <p>Seu conhecimento em bioquímica é ouro na formulação de ativos como ácido hialurônico, retinol e peptídeos.</p>
       </div>
-      <!-- Card 3 -->
       <div class="aud-card reveal d2">
         <div class="aud-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="#00c8aa" stroke-width="1.8">
@@ -1192,7 +1129,7 @@ footer span { margin: 0 10px; opacity: .35; }
   <div class="section-inner" style="text-align:center">
     <div class="reveal">
       <p class="section-label">Conteúdo do pacote</p>
-      <h2 class="section-title" id="whatHeading">Tudo que está no <em>pacote</em></h2>
+      <h2 class="section-title" id="whatHeading">Tudo que está no <em>pacote grátis</em></h2>
       <div class="divider" style="margin:14px auto 0"></div>
     </div>
 
@@ -1214,14 +1151,44 @@ footer span { margin: 0 10px; opacity: .35; }
         <h3>Fornecedores de Matérias-Primas</h3>
         <p>Lista curada de distribuidores com grau técnico. Preço de laboratório, não de varejo.</p>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="what-card premium-card reveal d2" style="text-align:left">
-        <div class="what-num" style="color:var(--amber)">// MOD_03 ★</div>
+<section class="what" aria-labelledby="whatPremiumHeading" style="background: var(--navy)">
+  <div class="section-inner" style="text-align:center">
+    <div class="reveal">
+      <p class="section-label">Conteúdo exclusivo</p>
+      <h2 class="section-title" id="whatPremiumHeading">Tudo o que está no <span class="amber">pacote Premium</span></h2>
+      <div class="divider" style="margin:14px auto 0"></div>
+    </div>
+
+    <div class="what-grid">
+      <div class="what-card premium-card reveal" style="text-align:left">
+        <div class="what-num" style="color:var(--amber)">// PREM_01 ★</div>
+        <div class="what-icon" style="background:rgba(244,185,66,.1);border-color:rgba(244,185,66,.25)" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f4b942" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>116 Fórmulas Completas</h3>
+        <p>Do skincare ao capilar. Mais de 3x o conteúdo do pacote gratuito, com o mesmo padrão técnico de detalhamento.</p>
+      </div>
+
+      <div class="what-card premium-card reveal d1" style="text-align:left">
+        <div class="what-num" style="color:var(--amber)">// PREM_02 ★</div>
         <div class="what-icon" style="background:rgba(244,185,66,.1);border-color:rgba(244,185,66,.25)" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="#f4b942" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
         </div>
         <h3>Planilha de Precificação</h3>
-        <p>Calcule custo/batelada, custo/unidade, markup e preço final automaticamente. Com análise de margem por categoria.</p>
+        <p>Calcula custo por batelada, custo por unidade, markup e preço final automaticamente. Com análise de margem por categoria de produto.</p>
+      </div>
+
+      <div class="what-card premium-card reveal d2" style="text-align:left">
+        <div class="what-num" style="color:var(--amber)">// PREM_03 ★</div>
+        <div class="what-icon" style="background:rgba(244,185,66,.1);border-color:rgba(244,185,66,.25)" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#f4b942" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Fornecedores + Controle de Estoque</h3>
+        <p>Lista completa de fornecedores técnicos e planilha de controle de produção e estoque, para nunca faltar insumo no meio de uma encomenda.</p>
       </div>
     </div>
   </div>
@@ -1515,7 +1482,6 @@ footer span { margin: 0 10px; opacity: .35; }
     return Number(n).toLocaleString('pt-BR');
   }
 
-  /* Scroll reveal: fade only, no vertical text jump. */
   var revealEls = qsa('.reveal');
   if (!('IntersectionObserver' in window)) {
     revealEls.forEach(function(el) { el.classList.add('visible'); });
@@ -1534,7 +1500,6 @@ footer span { margin: 0 10px; opacity: .35; }
     });
   }
 
-  /* Floating CTA */
   var floatCta = document.getElementById('floatCta');
   function updateFloat() {
     if (!floatCta) return;
@@ -1546,7 +1511,6 @@ footer span { margin: 0 10px; opacity: .35; }
   window.addEventListener('resize', updateFloat, { passive: true });
   updateFloat();
 
-  /* CTA routing */
   qsa('[data-premium-cta]').forEach(function(btn) {
     btn.addEventListener('click', function(e) {
       e.preventDefault();
@@ -1562,7 +1526,6 @@ footer span { margin: 0 10px; opacity: .35; }
     link.addEventListener('click', function(e) { e.preventDefault(); });
   });
 
-  /* FAQ accordion */
   qsa('.faq-item').forEach(function(item, index) {
     var btn = item.querySelector('.faq-q');
     var panel = item.querySelector('.faq-a');
@@ -1585,7 +1548,6 @@ footer span { margin: 0 10px; opacity: .35; }
     });
   });
 
-  /* Countdown */
   function getCountdown() {
     var now = new Date();
     var end = new Date(now);
@@ -1613,7 +1575,6 @@ footer span { margin: 0 10px; opacity: .35; }
   tickCountdown();
   window.setInterval(tickCountdown, 1000);
 
-  /* Download counter: no load-time jump from +1.120 to huge values. */
   var dlEl = document.getElementById('dlCount');
   var baseCount = 1120;
   var counterPattern = [0, 1, 0, 0, 2, 0, 1, 0];
@@ -1640,7 +1601,6 @@ footer span { margin: 0 10px; opacity: .35; }
     }, 45000);
   }
 
-  /* Modal */
   var overlay    = document.getElementById('pdfModal');
   var modalBox   = overlay ? overlay.querySelector('.modal-box') : null;
   var closeBtn   = document.getElementById('modalClose');
@@ -1757,7 +1717,6 @@ footer span { margin: 0 10px; opacity: .35; }
   if (dlBtn) {
     dlBtn.addEventListener('click', function() {
       if (dlBtn.disabled) return;
-      /* Add the real file URL or API call here when it is available. */
       dlBtn.classList.remove('ready');
       dlBtn.classList.add('success');
       dlBtn.textContent = 'Download iniciado!';
@@ -1786,3 +1745,5 @@ footer span { margin: 0 10px; opacity: .35; }
 </script>
 </body>
 </html>
+
+          
